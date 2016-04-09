@@ -22,6 +22,9 @@
     <!-- 2. Configure SystemJS -->
     <script>
       System.config({
+        map: {
+          '@angular2-material': '../node_modules/@angular2-material'
+        },
         packages: {
           app: {
             format: 'register',
@@ -32,29 +35,55 @@
             defaultExtension: 'js',
             main: 'core.js'
           },
-          '@angular2-material/checkbox': {
+          '@angular2-material/sidenav': {
             format: 'cjs',
             defaultExtension: 'js',
-            main: 'checkbox.js'
+            main: 'sidenav.js'
           },
           '@angular2-material/toolbar': {
             format: 'cjs',
             defaultExtension: 'js',
             main: 'toolbar.js'
           },
+          '@angular2-material/card': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'card.js'
+          },
           '@angular2-material/button': {
             format: 'cjs',
             defaultExtension: 'js',
             main: 'button.js'
           },
-          '@angular2-material/sidenav': {
+          '@angular2-material/checkbox': {
             format: 'cjs',
             defaultExtension: 'js',
-            main: 'sidenav.js'
-          }
+            main: 'checkbox.js'
+          },
+          '@angular2-material/radio': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'radio.js'
+          },
+          '@angular2-material/progress-circle': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'progress-circle.js'
+          },
+          '@angular2-material/input': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'input.js'
+          },
+          '@angular2-material/list': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'list.js'
+          },
         }
       });
-      System.import('app/main').then(null, console.error.bind(console));
+      System.import('app/main')
+            .then(null, console.error.bind(console));
     </script>
   </head>
 

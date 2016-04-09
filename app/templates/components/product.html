@@ -1,0 +1,12 @@
+<h2>Product List</h2>
+<ul class='products'>
+  <li *ngFor="#product of products; trackBy:trackByProduct"
+    [class.selected]="product == selectedProduct"
+    (click)="selectProduct(product)">
+    <span class="badge">{{product.id}}</span> {{product.name}}
+  </li>
+</ul>
+<div *ngIf="selectedProduct">
+  <h2>{{ selectedProduct.name | uppercase }}</h2>
+  <button (click)="gotoDetail(selectedProduct)">View Details</button>
+</div>

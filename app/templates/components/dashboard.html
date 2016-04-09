@@ -1,0 +1,7 @@
+<h3>Top Seller Products</h3>
+<div class="grid grid-pad">
+  <div *ngFor="#product of products" class="col-1-4">
+    <dashboard-item [product]="product" (click)="gotoDetail(product)">
+    </dashboard-item>
+  </div>
+</div>

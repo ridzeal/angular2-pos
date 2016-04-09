@@ -1,0 +1,13 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo left">{{ title }}</a>
+    <ul class="right">
+      <li><a [routerLink]="['Dashboard']">Dashboard</a></li>
+      <li><a [routerLink]="['Products']">Products</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="progress">
+  <div class="determinate"></div>
+</div>
+<router-outlet></router-outlet>
